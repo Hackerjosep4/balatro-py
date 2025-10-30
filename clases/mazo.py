@@ -1,14 +1,14 @@
-from carta import carta
+from .carta import Carta
 from random import randint
 
-class mazo:
+class Mazo:
     def __init__(self):
         self.cartas = []
     def __init__(self, order : bool):
         self.cartas = []
         for i in range(4):
             for j in range(1, 14):
-                self.cartas.append(carta(i, j))
+                self.cartas.append(Carta(i, j))
         if not order:
             self.mezclar()
     

@@ -1,5 +1,5 @@
 
-class carta:
+class Carta:
     def __init__(self, p, n):
         self.palo = p
         self.numero = n
@@ -15,7 +15,7 @@ class carta:
             return "♦"
         else:
             return "-"
-    def strp(self):
+    def strsp(self):
         return self.strp(self.palo)
     
     def strn(self, n):
@@ -31,12 +31,12 @@ class carta:
             return str(n)
         else:
             return "-"
-    def strn(self):
+    def strsn(self):
         return self.strn(self.numero)
     
-    def __str__(self, pretty):
-        if pretty:
-            text = self.strp()+" "+self.strn()
+    def __str__(self):
+        if True:
+            text = self.strsp()+" "+self.strsn()
         else:
             text = str(self.palo)+" "+str(self.numero)
         return text
