@@ -19,3 +19,4 @@ class mazo:
             i = randint(0, len(cartas1)-1)
             cartas2.append(cartas1[i])
             cartas1.pop(i)
+        self.cartas = cartas2
