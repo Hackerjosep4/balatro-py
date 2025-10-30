@@ -20,3 +20,10 @@ class Mazo:
             cartas2.append(cartas1[i])
             cartas1.pop(i)
         self.cartas = cartas2
+    
+    def mirar_carta(self): # Devuelve la primera carta
+        return self.cartas[0]
+    
+    def sacar_carta(self): # Borra y devuelve la primera carta
+        carta = self.cartas.pop(0)
+        return carta

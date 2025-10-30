@@ -4,7 +4,7 @@ class Carta:
         self.palo = p
         self.numero = n
     
-    def strp(self, p):
+    def strp(self, p): # String palo
         if p == 0:
             return "♠"
         elif p == 1:
@@ -15,10 +15,10 @@ class Carta:
             return "♦"
         else:
             return "-"
-    def strsp(self):
+    def strsp(self): # String self palo
         return self.strp(self.palo)
     
-    def strn(self, n):
+    def strn(self, n): # String numero
         if n == 1:
             return "A"
         elif n == 11:
@@ -31,12 +31,13 @@ class Carta:
             return str(n)
         else:
             return "-"
-    def strsn(self):
+    def strsn(self): # String self  numero
         return self.strn(self.numero)
     
     def __str__(self):
-        if True:
-            text = self.strsp()+" "+self.strsn()
-        else:
-            text = str(self.palo)+" "+str(self.numero)
+        text = self.strsn()+self.strsp()
+        return text
+
+    def literal_str(self):
+        text = str(self.numero)+" "+str(self.palo)
         return text
